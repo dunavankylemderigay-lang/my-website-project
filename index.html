@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Una ang Ginoo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <h1>Una ang Ginoo</h1>
+        <p class="login-subtitle">Light of the World</p>
+        <form class="login-form" onsubmit="return checkLogin()">
+            <label>Username</label>
+            <input type="text" id="username" required>
+            <label>Password</label>
+            <input type="password" id="password" required>
+            <button type="submit">Log In</button>
+        </form>
+        <p class="login-note">
+            “Commit to the Lord whatever you do.” – Proverbs 16:3
+        </p>
+    </div>
+</body>
+<script>
+    function checkLogin() {
+        const correctUsername = "DunavanKyle";
+        const correctPassword = "Derigay2006";
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        if(username === correctUsername && password === correctPassword) {
+            window.location.href = "reflection.html";
+            return false;
+        } 
+        else{
+            alert("Wrong username or password!");
+            return false;
+        }
+    }
+</script>
+</html>
